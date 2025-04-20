@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useContext } from "react";
 import { AuthContext } from "../App";
-import { Plus, Minus, X, Divide, Calculator, Percent, Triangle, Circle, Square, ChartLine } from "lucide-react";
+import { Plus, Minus, X, Divide, Calculator, Percent, Triangle, Circle, Square, ChartLine, DollarSign } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const topicShowcase = [
@@ -148,11 +148,11 @@ const HomePage = () => {
           
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4 text-2xl">
-              📈
+              💸
             </div>
-            <h3 className="text-xl font-semibold mb-2">Track Progress</h3>
+            <h3 className="text-xl font-semibold mb-2">Completely Free</h3>
             <p className="text-gray-600">
-              Monitor improvement over time and identify areas that need more practice.
+              High-quality mathematics learning at no cost to parents and schools.
             </p>
           </div>
         </div>
