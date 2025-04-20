@@ -1,8 +1,36 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useContext } from "react";
 import { AuthContext } from "../App";
+import { Plus, Minus, X, Divide } from "lucide-react";
+import { Card } from "@/components/ui/card";
+
+const topicShowcase = [
+  { 
+    name: "Addition", 
+    icon: <Plus className="w-8 h-8" />, 
+    description: "Master addition from basic numbers to complex calculations",
+    color: "bg-blue-100 text-blue-700"
+  },
+  { 
+    name: "Subtraction", 
+    icon: <Minus className="w-8 h-8" />, 
+    description: "Learn to subtract with confidence at any level",
+    color: "bg-green-100 text-green-700"
+  },
+  { 
+    name: "Multiplication", 
+    icon: <X className="w-8 h-8" />, 
+    description: "Explore multiplication from times tables to larger numbers",
+    color: "bg-purple-100 text-purple-700"
+  },
+  { 
+    name: "Division", 
+    icon: <Divide className="w-8 h-8" />, 
+    description: "Understanding division from basics to long division",
+    color: "bg-orange-100 text-orange-700"
+  }
+];
 
 const HomePage = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -51,6 +79,34 @@ const HomePage = () => {
             <div className="absolute top-0 right-0 w-16 h-16 bg-secondary rounded-full translate-x-[30%] translate-y-[-30%]"></div>
           </div>
         </div>
+      </section>
+
+      {/* Topic Showcase Section */}
+      <section className="py-12 bg-gray-50 rounded-2xl">
+        <h2 className="text-3xl font-bold text-center mb-8">What You'll Learn</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+          {topicShowcase.map((topic) => (
+            <Card 
+              key={topic.name}
+              className="p-6 transition-all hover:shadow-lg"
+            >
+              <div className={`${topic.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-4`}>
+                {topic.icon}
+              </div>
+              <h3 className="text-xl font-semibold mb-2">{topic.name}</h3>
+              <p className="text-gray-600">{topic.description}</p>
+            </Card>
+          ))}
+        </div>
+        {isLoggedIn ? (
+          <div className="text-center mt-8">
+            <Link to="/years">
+              <Button size="lg" className="text-lg">
+                Start Learning Now
+              </Button>
+            </Link>
+          </div>
+        ) : null}
       </section>
 
       {/* Features Section */}
