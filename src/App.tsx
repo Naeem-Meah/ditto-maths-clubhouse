@@ -15,6 +15,7 @@ import SignupPage from "./pages/SignupPage";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import AuthLayout from "./components/AuthLayout";
+import RequireAuth from "./components/RequireAuth";
 
 const queryClient = new QueryClient();
 
@@ -53,12 +54,49 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Layout />}>
-                <Route index element={<HomePage />} />
-                <Route path="years" element={<YearSelectionPage />} />
-                <Route path="topics/:yearId" element={<TopicSelectionPage />} />
-                <Route path="quiz/:yearId/:topicId" element={<QuizPage />} />
-                <Route path="results" element={<QuizResultsPage />} />
+                {/* HomePage: require login */}
+                <Route
+                  index
+                  element={
+                    <RequireAuth>
+                      <HomePage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="years"
+                  element={
+                    <RequireAuth>
+                      <YearSelectionPage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="topics/:yearId"
+                  element={
+                    <RequireAuth>
+                      <TopicSelectionPage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="quiz/:yearId/:topicId"
+                  element={
+                    <RequireAuth>
+                      <QuizPage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="results"
+                  element={
+                    <RequireAuth>
+                      <QuizResultsPage />
+                    </RequireAuth>
+                  }
+                />
               </Route>
+              {/* Auth pages don't require login */}
               <Route path="/" element={<AuthLayout />}>
                 <Route path="login" element={<LoginPage />} />
                 <Route path="signup" element={<SignupPage />} />

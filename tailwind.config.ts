@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -26,18 +25,18 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#9b87f5',
+					DEFAULT: '#2563eb',
 					foreground: '#ffffff',
-					light: '#D6BCFA',
-					dark: '#7E69AB'
+					light: '#60a5fa',
+					dark: '#1d4ed8'
 				},
 				secondary: {
-					DEFAULT: '#F2FCE2',
-					foreground: '#333333'
+					DEFAULT: '#dbeafe',
+					foreground: '#1e293b'
 				},
 				accent: {
-					DEFAULT: '#D3E4FD',
-					foreground: '#333333'
+					DEFAULT: '#3b82f6',
+					foreground: '#f1f5f9'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -56,14 +55,14 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+					DEFAULT: '#e0e7ef',
+					foreground: '#0f172a',
+					primary: '#2563eb',
+					'primary-foreground': '#ffffff',
+					accent: '#dbeafe',
+					'accent-foreground': '#2563eb',
+					border: '#cbd5e1',
+					ring: '#2563eb'
 				}
 			},
 			fontFamily: {
