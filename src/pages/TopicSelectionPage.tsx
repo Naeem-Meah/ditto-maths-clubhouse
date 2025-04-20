@@ -1,9 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { Plus, Minus, Divide, Multiply } from "lucide-react";
+import { Plus, Minus, Divide, X } from "lucide-react";
 
 interface Topic {
   id: string;
@@ -56,7 +55,7 @@ const topicsByYear: Record<string, Topic[]> = {
     { 
       id: "multiplication", 
       name: "Multiplication", 
-      icon: <Multiply />, 
+      icon: <X />, 
       description: "2, 5 and 10 times tables", 
       color: "bg-purple-100 text-purple-700" 
     },
@@ -79,7 +78,7 @@ const topicsByYear: Record<string, Topic[]> = {
     { 
       id: "multiplication", 
       name: "Multiplication", 
-      icon: <Multiply />, 
+      icon: <X />, 
       description: "3, 4 and 8 times tables", 
       color: "bg-purple-100 text-purple-700" 
     },
@@ -109,7 +108,7 @@ const topicsByYear: Record<string, Topic[]> = {
     { 
       id: "multiplication", 
       name: "Multiplication", 
-      icon: <Multiply />, 
+      icon: <X />, 
       description: "All times tables up to 12", 
       color: "bg-purple-100 text-purple-700" 
     },
@@ -139,7 +138,7 @@ const topicsByYear: Record<string, Topic[]> = {
     { 
       id: "multiplication", 
       name: "Multiplication", 
-      icon: <Multiply />, 
+      icon: <X />, 
       description: "Multiplying numbers up to 4 digits", 
       color: "bg-purple-100 text-purple-700" 
     },
@@ -169,7 +168,7 @@ const topicsByYear: Record<string, Topic[]> = {
     { 
       id: "multiplication", 
       name: "Multiplication", 
-      icon: <Multiply />, 
+      icon: <X />, 
       description: "Multi-step multiplication problems", 
       color: "bg-purple-100 text-purple-700" 
     },
