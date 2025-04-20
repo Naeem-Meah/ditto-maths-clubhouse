@@ -2,33 +2,45 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useContext } from "react";
 import { AuthContext } from "../App";
-import { Plus, Minus, X, Divide } from "lucide-react";
+import { Plus, Minus, X, Divide, Calculator, Percent, Triangle, Circle, Square, ChartLine } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const topicShowcase = [
   { 
-    name: "Addition", 
-    icon: <Plus className="w-8 h-8" />, 
-    description: "Master addition from basic numbers to complex calculations",
+    name: "Number & Place Value", 
+    icon: <Calculator className="w-8 h-8" />, 
+    description: "Understanding numbers up to a million, negatives, and place value",
     color: "bg-blue-100 text-blue-700"
   },
   { 
-    name: "Subtraction", 
-    icon: <Minus className="w-8 h-8" />, 
-    description: "Learn to subtract with confidence at any level",
+    name: "Operations", 
+    icon: <Plus className="w-8 h-8" />, 
+    description: "Addition, subtraction, multiplication, and division mastery",
     color: "bg-green-100 text-green-700"
   },
   { 
-    name: "Multiplication", 
-    icon: <X className="w-8 h-8" />, 
-    description: "Explore multiplication from times tables to larger numbers",
+    name: "Fractions & Decimals", 
+    icon: <Divide className="w-8 h-8" />, 
+    description: "Working with fractions, decimals, and percentages",
     color: "bg-purple-100 text-purple-700"
   },
   { 
-    name: "Division", 
-    icon: <Divide className="w-8 h-8" />, 
-    description: "Understanding division from basics to long division",
+    name: "Measurement", 
+    icon: <Square className="w-8 h-8" />, 
+    description: "Length, mass, volume, time, and money calculations",
     color: "bg-orange-100 text-orange-700"
+  },
+  {
+    name: "Geometry", 
+    icon: <Triangle className="w-8 h-8" />, 
+    description: "Properties of shapes, position, and direction",
+    color: "bg-pink-100 text-pink-700"
+  },
+  {
+    name: "Statistics", 
+    icon: <ChartLine className="w-8 h-8" />, 
+    description: "Data handling, graphs, and probability",
+    color: "bg-indigo-100 text-indigo-700"
   }
 ];
 
@@ -84,7 +96,7 @@ const HomePage = () => {
       {/* Topic Showcase Section */}
       <section className="py-12 bg-gray-50 rounded-2xl">
         <h2 className="text-3xl font-bold text-center mb-8">What You'll Learn</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {topicShowcase.map((topic) => (
             <Card 
               key={topic.name}
