@@ -54,15 +54,9 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Layout />}>
-                {/* HomePage: require login */}
-                <Route
-                  index
-                  element={
-                    <RequireAuth>
-                      <HomePage />
-                    </RequireAuth>
-                  }
-                />
+                {/* HomePage: accessible to everyone */}
+                <Route index element={<HomePage />} />
+                {/* All other app routes require authentication */}
                 <Route
                   path="years"
                   element={
